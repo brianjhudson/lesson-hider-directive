@@ -19,22 +19,21 @@ angular.module("directivePractice").directive("lessonHider", function(){
       })
 
       function findLessons() {
-        var found = false;
+        var found = [];
         for (var i = 0; i < scope.schedule.length; i++) {
           if (scope.lesson === scope.schedule[i].lesson) {
             scope.lessonDay = scope.schedule[i].weekday
-            element.css("color", "blue");
-            found = true;
-          }
-          if (!found) {
-            element.css("font-style", "italic");
-            scope.lessonDay= "Unscheduled";
+            found.push(scope.lesson);
           }
         }
+        if (found.indexOf(scope.lesson) === -1) {
+          element.css("font-style", "italic");
+          scope.lessonDay= "Unscheduled";
+        }
       }
+
       scope.removeLesson = function(lesson) {
         scope.lessons.splice(scope.lessons.indexOf(lesson), 1);
-        console.log(scope.lessons)
       }
     }
   }
