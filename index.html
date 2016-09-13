@@ -10,6 +10,8 @@
     <script src="lessonHider.js" charset="utf-8"></script>
   </head>
   <body ng-controller="lessonCtrl">
-    <lesson-hider ng-repeat="lesson in lessons" lesson="lesson"></lesson-hider>
+    <ul>
+      <lesson-hider ng-repeat="lesson in lessons" lesson="lesson"></lesson-hider>
+    </ul>
   </body>
 </html>
