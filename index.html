@@ -20,10 +20,17 @@
           <tr>
             <th>Lesson</th>
             <th>Day</th>
+            <th>Remove</th>
           </tr>
         </thead>
         <tbody>
-          <tr lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert="announceDay(lesson, day)"></tr>
+          <tr lesson-hider
+              ng-repeat="lesson in lessons"
+              lesson="lesson"
+              day-alert="announceDay(lesson, day)"
+              lessons="lessons"
+          >
+          </tr>
         </tbody>
       </table>
     </div>

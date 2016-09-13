@@ -1,5 +1,6 @@
 <tr>
-  <td>{{lesson}}</td>
+  <td class="content">{{lesson}}</td>
   <!-- <td><button class="btn btn-default" ng-click="dayAlert({lesson: lesson, day: lessonDay})">Show Schedule Day</button></td> -->
-  <td>{{lessonDay}}</td>
+  <td class="content">{{lessonDay}}</td>
+  <td ng-click="removeLesson(lesson)"><span class="glyphicon glyphicon-remove"></span></td>
 </tr>
