@@ -20,7 +20,9 @@ angular.module("directivePractice").directive("lessonHider", function(){
             return;
           }
         }
-        element.css("text-decoration", "line-through");
+        element.css("font-style", "italic");
+        scope.lessonDay= "Unscheduled";
+
       })
     }
   }
