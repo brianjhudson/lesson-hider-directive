@@ -4,6 +4,7 @@ angular.module("directivePractice").directive("lessonHider", function(){
     , replace: true
     , scope: {
         lesson: "="
+        , dayAlert: "&"
     }
     , templateUrl: 'lessonHider.html'
     , controller: function($scope, lessonService){
@@ -12,9 +13,9 @@ angular.module("directivePractice").directive("lessonHider", function(){
     , link: function(scope, element, attributes) {
       scope.getSchedule.then(function(result){
         scope.schedule = result.data;
-        console.log(scope.schedule);
         for (var i = 0; i < scope.schedule.length; i++) {
           if (scope.lesson === scope.schedule[i].lesson) {
+            scope.lessonDay = scope.schedule[i].weekday
             element.css("text-decoration", "line-through");
             return;
           }
