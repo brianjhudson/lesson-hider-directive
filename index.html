@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Lesson Hider</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="lessonCtrl.js" charset="utf-8"></script>
@@ -10,8 +11,21 @@
     <script src="lessonHider.js" charset="utf-8"></script>
   </head>
   <body ng-controller="lessonCtrl">
-    <ul>
-      <lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert="announceDay(lesson, day)"></lesson-hider>
-    </ul>
+    <div class="container">
+      <div class="page-header">
+        <h2>Lesson Finder</h2>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Lesson</th>
+            <th>Day</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert="announceDay(lesson, day)"></tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>

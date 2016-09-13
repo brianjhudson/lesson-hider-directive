@@ -1,6 +1,6 @@
 angular.module("directivePractice").directive("lessonHider", function(){
   return {
-    restrict: 'E'
+    restrict: 'A'
     , replace: true
     , scope: {
         lesson: "="
