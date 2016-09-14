@@ -1,22 +1,22 @@
 [
   {
-    "weekday": "Monday",
+    "weekday": "Sep 19, 2016",
     "lesson": "Routing"
   },
   {
-    "weekday": "Tuesday",
+    "weekday": "Sep 20, 2016",
     "lesson": "Directives"
   },
   {
-    "weekday": "Wednesday",
+    "weekday": "Sep 21, 2016",
     "lesson": "Review"
   },
   {
-    "weekday": "Thursday",
+    "weekday": "Sep 22, 2016",
     "lesson": "Firebase"
   },
   {
-    "weekday": "Friday",
+    "weekday": "Sep 23, 2016",
     "lesson": "No server project"
   }
 ]

@@ -4,7 +4,11 @@ angular.module("directivePractice").controller("lessonCtrl", function($scope, le
   $scope.announceDay = function(lesson, day) {
       alert("The lesson on " + lesson + " is active on " + day + ".");
   }
-  $scope.removeLesson = function(lesson) {
-    $
+  $scope.showEditScreen = false;
+  $scope.newLesson = "";
+  $scope.addLesson = function(newLesson){
+    $scope.lessons.push(newLesson);
+    $scope.newLesson = "";
+    $scope.showEditScreen = false;
   }
 })

@@ -6,7 +6,6 @@ angular.module("directivePractice").directive("lessonHider", function(){
         lesson: "="
         , lessons: "="
         , dayAlert: "&"
-
     }
     , templateUrl: 'lessonHider.html'
     , controller: function($scope, lessonService){
@@ -27,8 +26,8 @@ angular.module("directivePractice").directive("lessonHider", function(){
           }
         }
         if (found.indexOf(scope.lesson) === -1) {
-          element.css("font-style", "italic");
           scope.lessonDay= "Unscheduled";
+          element.css('font-style', 'italic');
         }
       }
 

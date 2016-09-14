@@ -1,6 +1,12 @@
-<tr>
-  <td class="content">{{lesson}}</td>
-  <!-- <td><button class="btn btn-default" ng-click="dayAlert({lesson: lesson, day: lessonDay})">Show Schedule Day</button></td> -->
-  <td class="content">{{lessonDay}}</td>
-  <td ng-click="removeLesson(lesson)"><span class="glyphicon glyphicon-remove"></span></td>
-</tr>
+<div class="panel panel-info">
+  <div ng-hide="showEdit">
+    <h4 class="panel-heading">{{lesson}}</h4>
+    <h5>{{lessonDay | date : format : short}}</h5>
+    <span class="glyphicon glyphicon-edit"></span>
+    <span ng-click="removeLesson(lesson)" class="glyphicon glyphicon-remove-sign"></span>
+  </div>
+  <div ng-show="showEdit">
+    <input type="text" placeholder="{{lesson}}">
+    <input type="date">
+    <span class="glyphicon glyphicon-cancel"></span><span class="glyphicon glyphicon-ok"></span>
+</div>
