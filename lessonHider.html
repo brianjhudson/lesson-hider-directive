@@ -2,11 +2,12 @@
   <div ng-hide="showEdit">
     <h4 class="panel-heading">{{lesson}}</h4>
     <h5>{{lessonDay | date : format : short}}</h5>
-    <span class="glyphicon glyphicon-edit"></span>
+    <span class="glyphicon glyphicon-edit" ng-click="showEdit = !showEdit"></span>
     <span ng-click="removeLesson(lesson)" class="glyphicon glyphicon-remove-sign"></span>
   </div>
   <div ng-show="showEdit">
-    <input type="text" placeholder="{{lesson}}">
-    <input type="date">
-    <span class="glyphicon glyphicon-cancel"></span><span class="glyphicon glyphicon-ok"></span>
+    <h6>Edit Lesson</h6>
+    <input class="form-control" ng-model="lesson" type="text" placeholder="{{lesson}}">
+    <input class="form-control" type="date" ng-model="lessonDay">
+    <span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-ok" ng-click="saveChanges(lesson, lessonDay)"></span>
 </div>

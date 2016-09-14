@@ -26,8 +26,18 @@ angular.module("directivePractice").directive("lessonHider", function(){
           }
         }
         if (found.indexOf(scope.lesson) === -1) {
-          scope.lessonDay= "Unscheduled";
+          scope.lessonDay = "Unscheduled";
           element.css('font-style', 'italic');
+        }
+      }
+      scope.showEdit = false;
+      scope.saveChanges = function (lesson, lessonDay) {
+        if (!scope.schedule[lesson]) {
+          scope.schedule.push({lesson: lesson, weekday: lessonDay})
+        }
+        scope.showEdit = false;
+        if (lessonDay) {
+          element.css('font-style', 'normal');
         }
       }
 
